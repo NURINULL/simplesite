@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="#" method="get">
+            <fieldset>
+                <legend>
+                    <img
+                        src="1200px-Zara_Logo.svg.png"
+                        alt="Zara"
+                        style="width: 200px; height: 100px"
+                    />
+                    <h3>회원가입</h3>
+                </legend>
+                <table border="1">
+                    <colgroup></colgroup>
+                    <tbody>
+                        <tr>
+                            <td><label for="userid">아이디</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="userid"
+                                    size="10"
+                                    autofocus
+                                    oninvalid="this.setCustomValidity('ID required')"
+                                    required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="userpw">비밀번호</label></td>
+                            <td>
+                                <input
+                                    type="password"
+                                    id="userpw"
+                                    pattern="[A-Za-Z0-9]{8,}"
+                                    size="20"
+                                    oninvalid="this.setCustomValidity('Password required')"
+                                    required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="userpw">비밀번호확인</label></td>
+                            <td>
+                                <input
+                                    type="password"
+                                    id="userpw"
+                                    pattern="[A-Za-Z0-9]{8,}"
+                                    size="20"
+                                    oninvalid="this.setCustomValidity('입력 필수항목입니다')"
+                                    required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="name">이름</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    size="10"
+                                    oninvalid="this.setCustomValidity('입력 필수항목입니다')"
+                                    required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ssn_front">주민등록번호</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="ssn_front"
+                                    pattern="\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])-[1-8]\d{6}"
+                                    size="10"
+                                    maxlength="6"
+                                />
+                                <label for="ssn_back"></label>
+                                <input
+                                    type="password"
+                                    id="ssn_back"
+                                    pattern="\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])-[1-8]\d{7}"
+                                    size="10"
+                                    maxlength="7"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="birth">생년월일</label></td>
+                            <td>
+                                <input
+                                    type="date"
+                                    id="birth"
+                                    size="10"
+                                    max="2024-01-15"
+                                    oninvalid="this.setCustomValidity('입력 필수항목입니다')"
+                                    required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="age">나이</label></td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="age"
+                                    size="10"
+                                    oninvalid="this.setCustomValidity('입력 필수항목입니다')"
+                                    required
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="useraddress">주소</label></td>
+                            <td>
+                                <input
+                                    type="address"
+                                    id="useraddress"
+                                    size="30"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">이메일</label></td>
+                            <td>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    pattern="\w{3,}@[A-Za-z0-9]{2,}.com"
+                                    size="20"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">연락처</label></td>
+                            <td><input type="tel" id="phone" size="10" /></td>
+                        </tr>
+                        <tr>
+                            <td>관심분야</td>
+                            <td>
+                                <input type="checkbox" id="option1" />
+                                <label for="option1">코딩</label>
+                                <input type="checkbox" id="option2" checked />
+                                <label for="option2">디자인</label>
+                                <input type="checkbox" id="option3" />
+                                <label for="option3">취업</label>
+                                <input type="checkbox" id="option4" />
+                                <label for="option4">기타</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>현재 직업</td>
+                            <td>
+                                <select name="job" id="">
+                                    <optgroup label="학생">
+                                        <option value="preschooler">
+                                            미취학
+                                        </option>
+                                        <option value="elementaryschool">
+                                            초등학생
+                                        </option>
+                                        <option value="middleschool">
+                                            중학생
+                                        </option>
+                                        <option value="highschool">
+                                            고등학생
+                                        </option>
+                                        <option value="univ">대학생</option>
+                                        <option value="gradschool">
+                                            대학원생
+                                        </option>
+                                    </optgroup>
+                                    <optgroup label="일반인">
+                                        <option value="jobseeker" selected>
+                                            취준생
+                                        </option>
+                                        <option value="worker">직장인</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>가입 경로</td>
+                            <td>
+                                <input type="text" list="way" name="s" />
+                                <datalist id="way">
+                                    <option value="Blog">블로그</option>
+                                    <option value="Search">검색</option>
+                                    <option
+                                        value="Instagram,Facebook,thread 등"
+                                    >
+                                        SNS
+                                    </option>
+                                    <option value="Etc">기타</option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>개인정보 수집 동의 여부</td>
+                            <td>
+                                <input
+                                    type="radio"
+                                    id="agree"
+                                    name="consent"
+                                    checked
+                                />
+                                <label for="agree">동의</label>
+                                <input
+                                    type="radio"
+                                    id="disagree"
+                                    name="consent"
+                                />
+                                <label for="disagree">미동의</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <input type="submit" value="가입하기" />
+                    <input type="reset" value="다시 작성하기" />
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>
